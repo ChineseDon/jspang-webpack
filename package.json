@@ -1,0 +1,25 @@
+{
+  "name": "jspang-webpack",
+  "version": "1.0.0",
+  "description": "study for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChineseDon/jspang-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChineseDon/jspang-webpack/issues"
+  },
+  "homepage": "https://github.com/ChineseDon/jspang-webpack#readme",
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
