@@ -8,3 +8,9 @@ devServer: {
     port: 1717  //端口号
   }
 ```
+
+file-loader和url-loader: 打包后的文件路径格式化
+
+分离css代码: extract-text-webpack-plugin
+
+分离图片： html-withimg-loader

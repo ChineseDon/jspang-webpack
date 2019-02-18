@@ -5,3 +5,10 @@
 body {
     background-color: aliceblue;
 }
+#tupian {
+    width: 400px;
+    height: 400px;
+    background-image: url("../images/1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
