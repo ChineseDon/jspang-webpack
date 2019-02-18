@@ -57,11 +57,18 @@ module.exports = {
         {
             test: /\.(html|htm)$/i,
             use: ['html-withimg-loader']
+        },
+        {
+            test: /\.(jsx|js)$/,
+            use: {
+                loader: 'babel-loader'
+            },
+            exclude: /node_modules/
         }
       ]
   },
   plugins: [
-      new uglify(),
+      // new uglify(),
       new htmlwebpackplugin({
           filename: 'index.html',
           minify: {

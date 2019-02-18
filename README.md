@@ -14,3 +14,7 @@ file-loader和url-loader: 打包后的文件路径格式化
 分离css代码: extract-text-webpack-plugin
 
 分离图片： html-withimg-loader
+
+优化css代码： purifycss删除未使用的css代码
+
+适应es 6: babel-preset-env

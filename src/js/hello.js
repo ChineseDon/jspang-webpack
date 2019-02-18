@@ -1,1 +1,3 @@
-document.body.style.backgroundColor = '#fff';
+{
+    document.body.style.backgroundColor = '#fff';
+}
