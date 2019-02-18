@@ -17,4 +17,6 @@ file-loader和url-loader: 打包后的文件路径格式化
 
 优化css代码： purifycss删除未使用的css代码
 
-适应es 6: babel-preset-env
+适应es 6: babel-core babel-loader babel-preset-env
+
+重新打包清除dist文件：clean-webpack-plugin

@@ -6,6 +6,8 @@ const extractextwebpackplugin = require('extract-text-webpack-plugin');
 
 const PurifyCssPlugin = require('purifycss-webpack');
 
+const cleanwebpackplugin = require('clean-webpack-plugin')
+
 // 多个css文件
 const extractCSS = new extractextwebpackplugin('css/[name]-one.css');
 const extractLESS = new extractextwebpackplugin('less/[name]-two.css');
@@ -82,7 +84,8 @@ module.exports = {
       extractLESS,
       new PurifyCssPlugin({
           paths: glob.sync(path.join(__dirname, 'src/pages/*.html'))
-      })
+      }),
+      new cleanwebpackplugin(['dist'])
       // new extractextwebpackplugin("/css/index.css")
   ],
   devServer: {
