@@ -11,4 +11,10 @@ body {
     background-image: url("../images/1.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+    transform: rotateX(30deg);
+}
+
+.g {
+    width: 100px;
+    height: 2200px;
 }

@@ -1,7 +1,10 @@
 const path = require('path');
+const glob = require('glob');
 const uglify = require('uglifyjs-webpack-plugin');
 const htmlwebpackplugin = require('html-webpack-plugin');
 const extractextwebpackplugin = require('extract-text-webpack-plugin');
+
+const PurifyCssPlugin = require('purifycss-webpack');
 
 // 多个css文件
 const extractCSS = new extractextwebpackplugin('css/[name]-one.css');
@@ -27,7 +30,7 @@ module.exports = {
             test: /.css$/,
             use: extractCSS.extract({
                 fallback: 'style-loader',
-                use: "css-loader"
+                use: [{loader: "css-loader", options: {importLoaders: 1}}, 'postcss-loader']
             })
         },
         {
@@ -69,7 +72,10 @@ module.exports = {
           template: './src/pages/index.html'
       }),
       extractCSS,
-      extractLESS
+      extractLESS,
+      new PurifyCssPlugin({
+          paths: glob.sync(path.join(__dirname, 'src/pages/*.html'))
+      })
       // new extractextwebpackplugin("/css/index.css")
   ],
   devServer: {
